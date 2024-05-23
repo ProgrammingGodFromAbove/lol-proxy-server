@@ -5,7 +5,7 @@ from django.conf import settings
 
 
 region = "asia"
-api_key = settings.RIOT_API_KEY
+api_key = "RGAPI-f25bdcb1-5fa9-40ab-b74f-e71d4a0ad48d"
 
 def get_match_history(request):
     puuid = request.GET.get('puuid')
@@ -18,7 +18,7 @@ def get_match_history(request):
     count = request.GET.get('count', 20)
 
     url = f'https://{region}.api.riotgames.com/lol/match/v5/matches/by-puuid/{puuid}/ids?start={start}&count={count}&api_key={api_key}'
-    
+    print(url)
     response = requests.get(url)
     if response.status_code != 200:
         return JsonResponse({'error': 'Failed to fetch data from Riot Games API'}, status=response.status_code)
@@ -36,6 +36,7 @@ def get_account_by_riot_id(request):
   
     region = "asia"
 
+   
     url = f'https://{region}.api.riotgames.com/riot/account/v1/accounts/by-riot-id/{game_name}/{tag_line}?api_key={api_key}'
     
     response = requests.get(url)
@@ -43,6 +44,7 @@ def get_account_by_riot_id(request):
         return JsonResponse({'error': 'Failed to fetch data from Riot Games API'}, status=response.status_code)
     
     account_info = response.json()
+    print(account_info)
     return JsonResponse(account_info)
 
 def get_match_details(request):

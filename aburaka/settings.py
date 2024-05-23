@@ -64,6 +64,7 @@ MIDDLEWARE = [
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
     "http://127.0.0.1:3000",
+    "http://localhost:5173",
     # Add any other origins as needed
 ]
 
@@ -140,3 +141,6 @@ STATIC_URL = "static/"
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 RIOT_API_KEY = env('RIOT_API_KEY')
+
+
+print(f"RIOT_API_KEY: {RIOT_API_KEY}")
