@@ -5,8 +5,8 @@ from django.conf import settings
 
 
 region = "asia"
-api_key = "RGAPI-f25bdcb1-5fa9-40ab-b74f-e71d4a0ad48d"
-
+api_key = "RGAPI-51c07ec5-2095-4c16-87c6-4635cfa159b9"
+print(api_key)
 def get_match_history(request):
     puuid = request.GET.get('puuid')
     if not puuid:

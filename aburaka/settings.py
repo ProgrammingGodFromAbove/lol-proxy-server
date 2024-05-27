@@ -143,4 +143,3 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 RIOT_API_KEY = env('RIOT_API_KEY')
 
 
-print(f"RIOT_API_KEY: {RIOT_API_KEY}")
