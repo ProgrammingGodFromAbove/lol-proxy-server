@@ -20,7 +20,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # Initialize environment variables
 
 env = environ.Env()
-environ.Env.read_env(BASE_DIR / '.env')
+# environ.Env.read_env(BASE_DIR / '.env')
+environ.Env.read_env()
 # Use environment variable for Riot API Key
 
 
