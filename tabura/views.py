@@ -5,8 +5,9 @@ from django.conf import settings
 
 
 region = "asia"
-api_key = "RGAPI-51c07ec5-2095-4c16-87c6-4635cfa159b9"
-print(api_key)
+api_key = "RGAPI-6307251d-e270-42df-bd59-b6999b68fe4c"
+# api_key = settings.RIOT_API_KEY
+
 def get_match_history(request):
     puuid = request.GET.get('puuid')
     if not puuid:
@@ -15,7 +16,7 @@ def get_match_history(request):
     
     region = "asia"
     start = request.GET.get('start', 0)
-    count = request.GET.get('count', 20)
+    count = request.GET.get('count', 25)
 
     url = f'https://{region}.api.riotgames.com/lol/match/v5/matches/by-puuid/{puuid}/ids?start={start}&count={count}&api_key={api_key}'
     print(url)
