@@ -29,7 +29,7 @@ environ.Env.read_env()
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = "django-insecure-k*uyog8!fy0te(1f09q(d_9n)=n%!i#(fm9626z@*4$==a&cl3"
+SECRET_KEY =  env('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -143,4 +143,6 @@ STATIC_URL = "static/"
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 RIOT_API_KEY = env('RIOT_API_KEY')
 
+
+print(RIOT_API_KEY)
 
