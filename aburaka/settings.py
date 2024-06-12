@@ -35,7 +35,7 @@ SECRET_KEY =  env('SECRET_KEY')
 DEBUG = True
 
 ALLOWED_HOSTS = ["*","lol-proxy-server-1.onrender.com"]
-#CSRF_TRUSTED_ORIGINS = ["http://localhost:3000", "http://
+CSRF_TRUSTED_ORIGINS = ["http://lol-proxy-server-1.onrender.com"]
 
 
 # Application definition
