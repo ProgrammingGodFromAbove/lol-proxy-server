@@ -34,8 +34,10 @@ SECRET_KEY =  env('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["*","lol-proxy-server-1.onrender.com"]
-CSRF_TRUSTED_ORIGINS = ["http://lol-proxy-server-1.onrender.com"]
+ALLOWED_HOSTS = ["*"]
+
+# ALLOWED_HOSTS = ["*","lol-proxy-server-1.onrender.com", "lol-stra-4.onrender.com"]
+# CSRF_TRUSTED_ORIGINS = ["http://lol-proxy-server-1.onrender.com", "https://lol-stra-4.onrender.com"]
 
 
 # Application definition
